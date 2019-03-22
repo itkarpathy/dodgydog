@@ -1,0 +1,626 @@
+/*
+Theme Name: DodgYdog
+Author: Zoltan Karpati
+Author URI: zoltankarpati.tech
+Description: Dog Theme Blog Website
+
+*/
+
+body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+   color: yellow;
+}
+
+h1 {
+   padding: 8px;
+   background:red;
+   border-radius: 8px;
+   margin: 0;
+   font-size: 64px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+span {
+   color: orange;
+   opacity: 0.7;
+}
+
+h2 {
+   color: black;
+}
+p {
+   line-height: 1.5;
+}
+
+main {
+   margin: 0 auto;
+}
+
+a {
+   text-decoration:none;
+   color:  rgb(201, 195, 195);
+}
+
+a:hover {
+   text-decoration: none;
+   color: red;
+}
+/*banner*/
+
+
+
+#banner {
+   height: 45vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   background-size: cover;
+   background-image: linear-gradient(to right, rgb(136, 119, 119) , rgb(51, 12, 192));
+   background-attachment: fixed;
+   background-position: center;
+   background-blend-mode: overlay;
+   color: white;
+
+}
+
+#banner h3 {
+   background: black;
+   border-radius: 8px;
+   padding: 0 24px;
+   font-size: 24px;
+}
+
+#searchbox{
+   position: fix;
+   right:0;
+   top:24px;
+   max-width: 500px;
+   width:100%;
+   pointer-events: none;
+   z-index: 50;
+   transition: 0.4s
+}
+
+/* #searchbox input {
+
+} */
+
+input, txtarea {
+   margin-top:20px;
+   margin-right: 25px;
+   height: 32px;
+   padding: 0 16px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 20px;
+   border: none;
+   box-shadow: inset 8px 3px 18px -4px rgba(0,0,0,0.4);
+}
+
+input:focus ,
+textarea:focus{
+   outline: none;
+}
+
+nav {
+   height:72px;
+   background: #202125;
+   width:100%;
+   margin:0 auto;
+   position: fixed;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 20px;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 16px 0 0 ;
+   box-sizing: 100;
+   z-index: 100;
+}
+
+nav a {
+   padding: 0 32px;
+   color: white;
+   transition: 0.4s
+}
+
+nav a :hover{
+   text-decoration: none;
+   color: red;
+}
+
+nav ul {
+   display: flex;
+   list-style: none;
+   justify-content: space-around;
+   align-items: center;
+   height :100%;
+   margin:0;
+}
+
+.active {
+   color: rgb(252, 59, 91);
+}
+
+#logo-img {
+   display: felx;
+   height: 100%;
+   background: #111;
+   padding:0 32px;
+   align-items:center;
+   color: white;
+   transition: 0.4s;
+}
+
+#logo-img img {
+   height: 100%;
+}
+
+#logo-img:hover {
+   background: rgb(114, 45, 57);
+}
+#menu-icon {
+   height: 100%;
+   font-size: 28px;
+   padding:0 4px;
+   color: white;
+   display: none;
+   text-align: center;
+   cursor: pointer;
+}
+
+#search-icon {
+   color: white;
+   padding: 0 32px;
+   cursor: pointer;
+   transition: 0.4s;
+}
+
+#search-icon:hover {
+   color: red;
+}
+
+#slideout-menu {
+   background-color:#333a3b;
+   z-index: 100;
+   position: fixed;
+   transition: 0.4s;
+   margin-top: 72px;
+   width: 1005px;
+   text-align: center;
+   opacity: 0;
+   pointer-events: none;
+   
+}
+
+#slideout-menu.active {
+   opacity: 1;
+}
+
+#slideout-menu ul{
+   color: white;
+   list-style: none;
+   padding: 0px 32px;
+   
+}
+
+#slideout-menu ul li {
+   margin-bottom: 60px;
+   padding: 8px;
+   
+}
+
+#slideout-menu ul li:hover {
+   background-color: rgb(255, 22, 22);
+   
+}
+
+#slideout-menu a {
+   text-align: center;
+   font-size: 25px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight: 600;
+   color: white;
+}
+
+#slideout-menu input{
+   width: 85%;
+   padding: 8px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 20px;
+   text-align: center;
+
+}
+
+section {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+.section-heading {
+   font-size: 32px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   border-left: 3px solid black;
+   border-right: 3px solid black;
+   transition: 0.4s;
+   display: inline-block;
+   padding: 4px 32px;
+
+}
+
+.section-heading:hover {
+   background-color: red;
+   padding: 4px 32px;
+   
+}
+
+.section-source p {
+   padding: 8px;
+   text-align: center;
+}
+
+#section-source a {
+   margin: 8px;
+   text-align: center;
+}
+
+.card-image {
+   transition: 0.4s;
+}
+
+.card-image:hover {
+   box-shadow: 0 10px 6px -6px #777;
+}
+
+.card .card-description {
+   padding: 0px 8px;
+}
+
+.card-meta-blogpost {
+   color: #333;
+   font-size: 14px;
+   padding: 16px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-meta a {
+   color: #333;
+}
+
+.btn-readmore {
+   padding: 8px 24px;
+   border: 3px solid black;
+   transition:0.4s;
+   display: inline-block;
+   margin-bottom: 24px;
+   margin-left: 24px;
+   font-weight: bold;
+   color: black;
+   background-color: white;
+
+}
+
+.btn-readmore:hover {
+   background-color: red;
+   padding: 8px 64px 8px 24px;
+   color: white;
+   text-decoration: none;
+}
+
+footer {
+   background-color: black;
+   padding: 8px;
+   color: #fff;
+   display: flex;
+}
+
+footer a {
+   color: white;
+}
+
+footer a:hover {
+   color: rgb(135, 79, 213);
+}
+
+footer .left-footer {
+   flex: 1;
+   border-right: 1px solid rgb(171, 171, 171);
+   padding:32px;
+   height: 200px;
+   padding-top: 0px;
+   
+}
+
+footer .left-footer ul {
+   padding:0;
+   list-style: none;
+   line-height: 1.5;
+}
+
+footer .right-footer {
+   flex: 2;
+   padding: 8px;
+   text-align: center;
+   list-style: none;
+   line-height: 1.5;
+}
+
+footer .right-footer ul {
+   padding:0;
+   list-style: none;
+   line-height: 1.5;
+}
+
+footer #social-media-footer a .fa-facebook,
+footer #social-media-footer a .fa-instagram,
+footer #social-media-footer a .fa-youtube,
+footer #social-media-footer a .fa-github {
+   transition: 0.4s;
+}
+
+footer #social-media-footer ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      padding: 0px;
+}
+
+footer #social-media-footer ul li {
+      font-size: 48px;
+      padding: 16px;
+      transition: 0.4s;
+}
+
+footer #social-media-footer ul li:hover a .fa-youtube {
+         color:rgb(245, 0, 0);
+}
+
+footer #social-media-footer ul li:hover a .fa-facebook {
+         color: rgb(0, 72, 255);
+         opacity: .8;
+}
+
+footer #social-media-footer ul li:hover a .fa-instagram {
+         /* background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);  */
+         color: orange;
+}
+
+/* Blog List */
+
+.page-heading {
+   font-size: 32px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   border-left: 3px solid black;
+   border-right: 3px solid black;
+   transition: .4s;
+   display: inline-block;
+   padding:4px 32px;
+   margin-top:120px;
+
+}
+
+.page-heading:hover {
+   background: red;
+   padding: 4px;
+}
+
+.card-meta {
+   color: #333;
+   font-size: 14px;
+   font-weight: bold;
+   padding-left: 8px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-meta a{
+   color:#333;
+}
+
+.pagination {
+   padding: 12px;
+   text-align: center;
+   font-weight: bold; 
+   
+}
+
+.pagination a {
+   padding: 8px 16px;
+   color: #333;
+   font-size: 22px;
+   display: inline-block;
+   transition: 0.4s;
+}
+
+.pagination a:hover{
+   border-top: 3px solid black;
+}
+
+/* Single blogpost */
+
+#post-container {
+   display:flex;
+}
+
+#blogpost {
+   display: flex;
+   flex-direction: column;
+   width: 70%;
+   border-left: 1px solid #999;
+}
+
+#blogpost .card {
+   width: 100%;
+}
+
+#blogpost .card-image:hover {
+   box-shadow: none;
+}
+
+/* #blogpost {
+   width: 100%;
+   border-left: 0;
+} */
+
+/* Sidebar */
+
+#sidebar {
+   background: #333;
+   flex:1;
+   padding: 8px 16px;
+   color: white;
+   box-shadow: inset 2px 0 51px -10px rgb(99, 83, 48);
+}
+
+/* Comment section */
+
+#comments-section{
+   border-top: 2px solid #eee;
+   padding: 8px;
+}
+
+/* media queries */
+
+@media (max-width: 600px) {
+
+   #slideout-menu {
+      display: block;
+   }
+
+  
+
+   #menu-icon {
+      display: block;
+      padding:20px 32px;
+   }
+
+   main{
+      width: 100%;
+   }
+
+   h1 {
+      font-size: 48px;
+   }
+
+   #banner h3 {
+      font-size: 20px;
+   }
+
+   .card {
+      text-align: center;
+   }
+
+   #logo-img {
+      padding: 0;
+   } 
+
+}
+
+@media (max-width:719px) {
+   #slideout-menu {
+      display: none;
+   }
+   main {
+      width:95%;
+   }
+    
+   #searhbox {
+      display: inline-block;
+   }
+
+   section {
+      flex-direction: column;
+   }
+
+   .card, .card-image img {
+      width: 99%;
+      margin:0;
+   }
+
+   footer {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   footer .left-footer {
+      flex: 1;
+      border-right: 0;
+      text-align: center;
+      margin-bottom: 7px;
+   }
+
+   footer .right-footer {
+      border-top: 1px solid grey;
+
+   }
+
+   #menu-icon {
+      display: block;
+      padding:20px 32px;
+   }
+
+
+
+@media (min-width:720px) {
+
+   main {
+      width:95%;
+   }
+
+   .card {
+      width: 45%;
+   }
+
+   .card .card-image img{
+      width: 100%;
+   }
+
+    #slideout-menu {
+      display: none!important;
+   }
+}
+
+@media (max-width: 900px) {
+   main {
+      width: 95%;
+   } 
+
+   nav ul {
+      display: none;
+   }
+
+   #menu-icon {
+      display: flex;
+   }
+
+   #slideout-menu {
+      display: block;
+   }
+
+   #searchbox {
+      display: none;
+   }
+
+   #sidebar{
+      display:none;
+   }
+
+@media (min-width:1200px) {
+   main {
+      width: 85%;
+   }
+
+
+   #blogpost {
+   width: 80%;
+   }
+
+   #slideout-menu {
+      display: none;
+   }
+}
+
+
+}}
